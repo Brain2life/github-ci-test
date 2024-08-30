@@ -19,4 +19,4 @@ jobs:
 
       - name: Run ESLint
         working-directory: sample-app
-        run: npm lint
+        run: npm run lint
