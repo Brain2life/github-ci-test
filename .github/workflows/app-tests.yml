@@ -20,3 +20,7 @@ jobs:
       - name: Run ESLint
         working-directory: sample-app
         run: npm run lint
+
+      - name: Run Prettier
+        working-directory: sample-app
+        run: npm run prettier
