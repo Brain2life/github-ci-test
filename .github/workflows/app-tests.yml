@@ -16,3 +16,7 @@ jobs:
       - name: Run tests                   
         working-directory: sample-app
         run: npm test
+
+      - name: Run ESLint
+        working-directory: sample-app
+        run: npm run lint
