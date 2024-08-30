@@ -15,3 +15,12 @@ To run the lint tests:
 ```bash
 npm run lint
 ```
+
+## Adding Prettier step
+
+To install prettier:
+```bash
+npm install --save-dev --save-exact prettier
+```
+
+To learn more, see [Prettier](https://prettier.io/docs/en/install)
