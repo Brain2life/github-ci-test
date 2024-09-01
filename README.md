@@ -1,6 +1,12 @@
 # github-ci-test
 
-Test GitHub CI capabilities as part of [Fundamentals of DevOps](https://www.gruntwork.io/fundamentals-of-devops) practice labs
+Solutions for the exercises from the [Fundamentals of DevOps Part 5: How to set up CI and CD ](https://www.gruntwork.io/fundamentals-of-devops/setup-ci-cd#how_to_set_up_ci_cd)
+
+## Exercises
+
+1. To help catch bugs, update the GitHub Actions workflow to run a JavaScript linter, such as [JSLint](https://www.jslint.com/) or [ESLint](https://eslint.org/), after every commit.
+2. To help keep your code consistently formatted, update the GitHub Actions workflow to run a code formatter, such as [Prettier](https://prettier.io/), after every commit.
+3. Run both the linter and code formatter as a precommit hook, so these checks run on your own computer before you can make a commit. You may wish to use the [pre-commit](https://pre-commit.com/) framework to manage your precommit hooks.
 
 ## Adding ESLint step
 
