@@ -7,7 +7,7 @@ variable "endpoint" {
   type        = string
 }
 
-variable "healthz_endpoint" {
-  description = "The endpoint to check the health of the Lambda function"
-  type        = string
-}
+# variable "healthz_endpoint" {
+#   description = "The endpoint to check the health of the Lambda function"
+#   type        = string
+# }
