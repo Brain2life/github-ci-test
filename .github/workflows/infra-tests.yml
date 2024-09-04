@@ -3,6 +3,24 @@ name: Infrastructure Tests
 on: push
 
 jobs:
+  tofu_format:
+    name: "Run tofu fmt"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: opentofu/setup-opentofu@v1
+
+      - name: Run tofu fmt
+        run: | 
+          tofu fmt
+
+      # Fail if formatting is needed
+      - name: Ensure code is formatted
+        run: |
+          git diff --exit-code
+        shell: bash
+
   terrascan:
     name: "Run Terrascan"
     runs-on: ubuntu-latest
