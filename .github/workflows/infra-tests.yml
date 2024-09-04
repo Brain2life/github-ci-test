@@ -15,6 +15,12 @@ jobs:
         run: | 
           tofu fmt
 
+      # Fail if formatting is needed
+      - name: Ensure code is formatted
+        run: |
+          git diff --exit-code
+        shell: bash
+
   terrascan:
     name: "Run Terrascan"
     runs-on: ubuntu-latest
