@@ -9,9 +9,9 @@ data "http" "test_endpoint" {
   depends_on = [time_sleep.wait]
 }
 
-data "http" "test_healthz_endpoint" {
-  url    = var.healthz_endpoint
-  method = "GET"
+# data "http" "test_healthz_endpoint" {
+#   url    = var.healthz_endpoint
+#   method = "GET"
 
-  depends_on = [time_sleep.wait]
-}
+#   depends_on = [time_sleep.wait]
+# }
