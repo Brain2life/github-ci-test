@@ -11,7 +11,8 @@ jobs:
 
       - name: Run tofu fmt
         uses: opentofu/setup-opentofu@v1
-        run: tofu fmt
+        run: | 
+          tofu fmt
 
   terrascan:
     name: "Run Terrascan"
