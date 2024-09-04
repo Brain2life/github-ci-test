@@ -23,7 +23,7 @@ module "function" {
 module "healthz" {
   source = "github.com/brikis98/devops-book//ch3/tofu/modules/lambda"
 
-  name = var.name + "healthz-sample"         
+  name = var.name
 
   src_dir = "${path.module}/src/healthz" 
   runtime = "nodejs20.x"         
@@ -49,7 +49,7 @@ module "gateway" {
 module "healthz-endpoint" {
   source = "github.com/brikis98/devops-book//ch3/tofu/modules/api-gateway"
 
-  name               = var.name + "healthz-endpoint"              
+  name               = var.name
   function_arn       = module.healthz.function_arn 
   api_gateway_routes = ["GET /"]
 }
