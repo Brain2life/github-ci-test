@@ -73,3 +73,45 @@ pre-commit run --all-files
 ## Adding code formatter step for tofu
 
 To add code formatter step, use the `opentofu/setup-opentofu@v1` action and run `tofu fmt` command
+
+## Refactor S3 backend configuration with Terragrunt
+
+[Terragrunt](https://terragrunt.gruntwork.io/) allows to avoid code duplications in Terraform/OpenTofu files and adhere your code to [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
+
+To install Terragrunt, see [installation](https://terragrunt.gruntwork.io/docs/getting-started/install/).
+
+To learn more about configuring S3 remote backend with Terragrunt, see ["Keep your remote state configuration DRY"](https://terragrunt.gruntwork.io/docs/features/keep-your-remote-state-configuration-dry/)
+
+For example, the common structure for Terragrunt files looks like the following:
+
+```bash
+├── terragrunt.hcl
+├── backend-app
+│   ├── main.tf
+│   └── terragrunt.hcl
+├── frontend-app
+│   ├── main.tf
+│   └── terragrunt.hcl
+├── mysql
+│   ├── main.tf
+│   └── terragrunt.hcl
+└── vpc
+    ├── main.tf
+    └── terragrunt.hcl
+```
+
+**NOTE**  
+The given solution uses `generate "backend"` block to create `backend.tf` files from scratch in each module.
+
+To avoid code duplication across multiple OpenTofu (Terraform) modules using Terragrunt, you can move the backend configuration into a `terragrunt.hcl` file. This allows you to centralize the backend configuration and reuse it across multiple modules.
+
+1. Define your backend configuration in a `terragrunt.hcl` file at a common location (e.g., the root folder), which will be referenced by other module directories.
+2. Create a `terragrunt.hcl` in each module: In each module, create a `terragrunt.hcl` file that includes the common configuration file. This ensures each module uses the same backend settings without duplicating the code.
+
+Example for a module folder: `module-folder/terragrunt.hcl`:
+
+```terraform
+include {
+  path = find_in_parent_folders() # Finds the common terragrunt.hcl in the parent folder
+}
+```
