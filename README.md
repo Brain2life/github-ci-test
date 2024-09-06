@@ -9,7 +9,8 @@ Solutions for the exercises from the [Fundamentals of DevOps Part 5: How to set 
 3. Run both the linter and code formatter as a precommit hook, so these checks run on your own computer before you can make a commit. You may wish to use the [pre-commit](https://pre-commit.com/) framework to manage your precommit hooks.
 4. Ensure that GitHub is authenticated to AWS and able to perform `tofu test` command for unit testing.
 5. To help keep your code consistently formatted, update the GitHub Actions workflow to run a code formatter, such as `tofu fmt`, after every commit.
-6. You’re probably annoyed by all the copy/paste you need to do with these backend configurations. Unfortunately, OpenTofu does not support using variables or any other kind of logic in backend blocks, so some amount of copy/paste is necessary. However, you can try out one of the following approaches to significantly reduce the code duplication:
+6. Create remote S3 backend for OpenTofu files. To see the changes, have a look at `add-s3-remote-backend` branch
+7. You’re probably annoyed by all the copy/paste you need to do with these backend configurations. Unfortunately, OpenTofu does not support using variables or any other kind of logic in backend blocks, so some amount of copy/paste is necessary. However, you can try out one of the following approaches to significantly reduce the code duplication:
    - [OpenTofu partial configuration](https://opentofu.org/docs/language/settings/backends/configuration/#partial-configuration)
    - [Terragrunt](https://terragrunt.gruntwork.io/)
 
