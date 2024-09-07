@@ -12,7 +12,7 @@ jobs:
       - uses: opentofu/setup-opentofu@v1
 
       - name: Run tofu fmt
-        run: | 
+        run: |
           tofu fmt
 
       # Fail if formatting is needed
@@ -48,7 +48,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v3
         with:
           # TODO: fill in your IAM role ARN!
-          role-to-assume: arn:aws:iam::992382495163:role/lambda-sample-tests
+          role-to-assume: arn:aws:iam::730335285880:role/lambda-sample-tests
           role-session-name: tests-${{ github.run_number }}-${{ github.actor }}
           aws-region: us-east-1
 
