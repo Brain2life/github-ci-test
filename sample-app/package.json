@@ -8,7 +8,7 @@
     "dockerize": "./build-docker-image.sh",
     "test": "jest --verbose --coverage",
     "lint": "eslint . --quiet",
-    "prettier": "prettier . --check"
+    "prettier": "prettier . --check --log-level silent"
   },
   "author": "Yevgeniy Brikman",
   "license": "MIT",
