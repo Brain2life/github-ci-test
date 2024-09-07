@@ -2,6 +2,8 @@
 
 Solutions for the exercises from the [Fundamentals of DevOps Part 5: How to set up CI and CD ](https://www.gruntwork.io/fundamentals-of-devops/setup-ci-cd#how_to_set_up_ci_cd)
 
+![https://www.fundamentals-of-devops.com/](./img/cover.png)
+
 ## Exercises
 
 1. To help catch bugs, update the GitHub Actions workflow to run a JavaScript linter, such as [JSLint](https://www.jslint.com/) or [ESLint](https://eslint.org/), after every commit.
