@@ -1,26 +1,26 @@
 {
-    "name": "sample-app",
-    "version": "v4",
-    "description": "Sample app for 'Fundamentals of DevOps and Software Delivery'",
-    "main": "app.js",
-    "scripts": {
-        "start": "node server.js",
-        "dockerize": "./build-docker-image.sh",
-        "test": "jest --verbose --coverage",
-        "lint": "eslint .",
-        "prettier": "prettier . --check"
-    },
-    "author": "Yevgeniy Brikman",
-    "license": "MIT",
-    "dependencies": {
-        "express": "^4.19.2"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.9.1",
-        "eslint": "^9.9.1",
-        "globals": "^15.9.0",
-        "jest": "^29.7.0",
-        "prettier": "3.3.3",
-        "supertest": "^7.0.0"
-    }
+  "name": "sample-app",
+  "version": "v4",
+  "description": "Sample app for 'Fundamentals of DevOps and Software Delivery'",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dockerize": "./build-docker-image.sh",
+    "test": "jest --verbose --coverage",
+    "lint": "eslint . --quiet",
+    "prettier": "prettier . --check"
+  },
+  "author": "Yevgeniy Brikman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "prettier": "3.3.3",
+    "supertest": "^7.0.0"
+  }
 }
