@@ -13,6 +13,7 @@ Solutions for the exercises from the [Fundamentals of DevOps Part 5: How to set 
 7. You’re probably annoyed by all the copy/paste you need to do with these backend configurations. Unfortunately, OpenTofu does not support using variables or any other kind of logic in backend blocks, so some amount of copy/paste is necessary. However, you can try out one of the following approaches to significantly reduce the code duplication:
    - [OpenTofu partial configuration](https://opentofu.org/docs/language/settings/backends/configuration/#partial-configuration)
    - [Terragrunt](https://terragrunt.gruntwork.io/)
+8. Create your own version of the `gh-actions-iam-roles` module that you can use for deploying other types of infrastructure, and not just Lambda functions: e.g., try to create IAM roles for deploying EKS clusters, EC2 instances, and so on
 
 ## Adding ESLint step
 
