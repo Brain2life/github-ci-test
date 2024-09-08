@@ -1,4 +1,4 @@
-name: Tofu Plan
+name: EC2 Plan
 
 on:
   pull_request: 
