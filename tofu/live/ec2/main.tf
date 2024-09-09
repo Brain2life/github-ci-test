@@ -18,6 +18,6 @@ resource "aws_instance" "ec2_instance" {
   instance_type   = "t2.micro"
 
   tags = {
-    Name = "OpenTofu-EC2-Instance-Sample"
+    Name = "OpenTofu-EC2-Instance"
   }
 }
