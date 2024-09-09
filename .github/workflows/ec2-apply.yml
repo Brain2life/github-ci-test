@@ -25,7 +25,7 @@ jobs:
 
       - name: tofu apply 
         id: apply
-        working-directory: tofu/live/e2
+        working-directory: tofu/live/ec2
         run: |
           tofu init -no-color -input=false
           tofu apply -no-color -input=false -lock-timeout=60m -auto-approve
