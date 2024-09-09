@@ -17,7 +17,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v3
         with:
           # TODO: fill in your IAM role ARN!
-          role-to-assume: arn:aws:iam::637423214760:role/ec2-sample-apply 
+          role-to-assume: arn:aws:iam::905418304539:role/ec2-sample-apply 
           role-session-name: apply-${{ github.run_number }}-${{ github.actor }}
           aws-region: us-east-1
 
