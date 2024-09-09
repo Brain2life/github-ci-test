@@ -4,6 +4,15 @@ Solutions for the exercises from the [Fundamentals of DevOps Part 5: How to set 
 
 ![https://www.fundamentals-of-devops.com/](./img/cover.png)
 
+## Table of contents:
+1. [Exercises](#exercises)
+2. [Adding ESLint step](#adding-eslint-step)
+3. [Adding Prettier step](#adding-prettier-step)
+4. [Adding pre-commit hook](#adding-pre-commit-hook)
+5. [Adding code formatter step for tofu](#adding-code-formatter-step-for-tofu)
+6. [Refactor S3 backend configuration with Terragrunt](#refactor-s3-backend-configuration-with-terragrunt)
+7. [Create own version of gh-actions-iam-roles module for EC2 instance](#create-own-version-of-gh-actions-iam-roles-module-for-ec2-instance)
+
 ## Exercises
 
 1. To help catch bugs, update the GitHub Actions workflow to run a JavaScript linter, such as [JSLint](https://www.jslint.com/) or [ESLint](https://eslint.org/), after every commit.
