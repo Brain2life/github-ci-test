@@ -118,3 +118,27 @@ include {
   path = find_in_parent_folders() # Finds the common terragrunt.hcl in the parent folder
 }
 ```
+
+## Create own version of gh-actions-iam-roles module for EC2 instance
+
+The own version of the module is available at [github.com/Brain2life/gh-actions-tofu-ec2-module](https://github.com/Brain2life/gh-actions-tofu-ec2-module).
+
+This module allows to see `tofu plan` output on push event and `tofu apply` on MR merge to the `main` branch for EC2 instance deployment operations.
+
+**NOTE**  
+Before pushing and creating MRs, don't forget to initialize and deploy `ec2_plan` and `ec2_apply` IAM roles at first. To initialize and apply go to `tofu/live/ci-cd-permissions/ec2-iam-roles` folder and run:
+
+```bash
+tofu init
+tofu apply
+```
+
+To get the ARNs of the two created IAM roles run:
+
+```bash
+tofu output
+```
+
+Specify the ARNs at respective `ec2-plan` and `ec2-apply` github workflows.
+
+As an example of successfull EC2 instance deployment on MR merge, see [https://github.com/Brain2life/github-ci-test/pull/20](https://github.com/Brain2life/github-ci-test/pull/20)
