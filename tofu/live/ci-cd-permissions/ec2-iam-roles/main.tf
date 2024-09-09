@@ -20,6 +20,6 @@ module "iam_roles" {
   ec2_base_name = "ec2-sample"                            
 
   enable_iam_role_for_ec2_plan  = true                                
-  # enable_iam_role_for_apply = true                                
+  enable_iam_role_for_ec2_apply = true                                
 
 }
